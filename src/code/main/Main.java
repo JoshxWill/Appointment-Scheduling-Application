@@ -1,5 +1,6 @@
-package code;
+package code.main;
 
+import code.dao.JDBC;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
