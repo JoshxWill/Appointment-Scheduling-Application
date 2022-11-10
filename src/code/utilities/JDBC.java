@@ -1,4 +1,4 @@
-package code.dao;
+package code.utilities;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

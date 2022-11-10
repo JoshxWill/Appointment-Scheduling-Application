@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="491.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.view.UserScheduleReport">
+   <children>
+      <TableView layoutX="80.0" layoutY="104.0" prefHeight="283.0" prefWidth="687.0">
+        <columns>
+          <TableColumn fx:id="USRApptColumn" prefWidth="105.0" text="Appointment_ID" />
+          <TableColumn fx:id="USRTitleColumn" prefWidth="79.0" text="Title" />
+            <TableColumn fx:id="USRTypeColumn" prefWidth="67.0" text="Type" />
+            <TableColumn fx:id="USRDescriptionColumn" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="USRStartDTColumn" prefWidth="123.0" text="Start Date and Time" />
+            <TableColumn fx:id="USREndDTColumn" prefWidth="135.0" text="End Date and Time" />
+            <TableColumn fx:id="USRCustomerIDColumn" minWidth="2.0" prefWidth="102.0" text="Customer_ID" />
+        </columns>
+      </TableView>
+      <Text layoutX="233.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select User" />
+      <ComboBox fx:id="SelectUser" layoutX="349.0" layoutY="69.0" onAction="#SelectUserMenu" prefWidth="150.0" />
+      <Button fx:id="USRResults" layoutX="582.0" layoutY="69.0" mnemonicParsing="false" onAction="#USRResultsBtn" text="Results" />
+      <Button fx:id="USRBackBtn" layoutX="715.0" layoutY="423.0" mnemonicParsing="false" onAction="#ReturnReportScreen" text="Back" />
+      <Label layoutX="333.0" layoutY="29.0" text="User Schedule Report">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

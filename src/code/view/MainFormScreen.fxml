@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.view.MainFormScreen">
+   <children>
+      <Text layoutX="146.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Infinity Corp Scheduling Application">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text layoutX="237.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Option:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="MainScreenApptBtn" layoutX="200.0" layoutY="150.0" mnemonicParsing="false" onAction="#MainScreenAppointmentBtn" prefHeight="58.0" prefWidth="199.0" text="Appointments" />
+      <Button fx:id="MainScreenCustomerBtn" layoutX="201.0" layoutY="223.0" mnemonicParsing="false" onAction="#MainScreenCustomerBtn" prefHeight="58.0" prefWidth="199.0" text="Customers" />
+      <Button fx:id="MainScreenReportBtn" layoutX="201.0" layoutY="297.0" mnemonicParsing="false" onAction="#MainScreenReportBtn" prefHeight="58.0" prefWidth="199.0" text="Reports" />
+      <Button fx:id="SignOut" layoutX="275.0" layoutY="390.0" mnemonicParsing="false" onAction="#ReturnLoginForm" text="Sign Out" />
+   </children>
+</AnchorPane>

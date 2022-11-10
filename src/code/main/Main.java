@@ -1,6 +1,6 @@
 package code.main;
 
-import code.dao.JDBC;
+import code.utilities.JDBC;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
