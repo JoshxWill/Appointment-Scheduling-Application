@@ -3,6 +3,7 @@ package code.dao;
 import code.model.Appointments;
 import code.model.MonthlyReports;
 import code.utilities.JDBC;
+import code.utilities.TimeConversions;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -40,7 +41,7 @@ public class DataBaseAppts {
                 String user = resultset.getString("User_Name");
                 String contact = resultset.getString("Contact_Name");
 
-                Appointments appointments = new Appointments(appointmentID, title, description, location, type, TimeConversions.localUtc(startDT), TimeConversions.localUtc(endDT), customerID, userID, contactID, customer, user, contact);
+                Appointments appointments = new Appointments(appointmentID, title, description, location, type, TimeConversions.UTCtoLocal1(startDT), TimeConversions.UTCtoLocal1(endDT), customerID, userID, contactID, customer, user, contact);
                 appointmentsObservableList.add(appointments);
             }
         } catch (SQLException throwables){
@@ -63,7 +64,7 @@ public class DataBaseAppts {
             String type = resultset.getString("Type");
             int count = resultset.getInt("Count");
 
-            MonthlyReports reports = new MonthlyReports(month, type, count);
+            MonthlyReports reports = new MonthlyReports(count, month, type);
             monthlyReports.add(reports);
         }
         return monthlyReports;
@@ -118,8 +119,8 @@ public class DataBaseAppts {
                         resultset.getString("User_Name"),
                         resultset.getString("Contact_Name"));
 
-                appointmentWeek.setStartDT(TimeConversions.localUtc(appointmentWeek.getStartDT()));
-                appointmentWeek.setEndDT(TimeConversions.localUtc(appointmentWeek.getEndDT()));
+                appointmentWeek.setStartDT(TimeConversions.UTCtoLocal1(appointmentWeek.getStartDT()));
+                appointmentWeek.setEndDT(TimeConversions.UTCtoLocal1(appointmentWeek.getEndDT()));
 
                 weeklyAppts.add(appointmentWeek);
 
@@ -160,8 +161,8 @@ public class DataBaseAppts {
                         resultset.getString("User_Name"),
                         resultset.getString("Contact_Name"));
 
-                appointmentMonth.setStartDT(TimeConversions.localUtc(appointmentMonth.getStartDT()));
-                appointmentMonth.setEndDT(TimeConversions.localUtc(appointmentMonth.getEndDT()));
+                appointmentMonth.setStartDT(TimeConversions.UTCtoLocal1(appointmentMonth.getStartDT()));
+                appointmentMonth.setEndDT(TimeConversions.UTCtoLocal1(appointmentMonth.getEndDT()));
                 monthlyAppts.add(appointmentMonth);
             }
         } catch (SQLException sqlException){

@@ -41,7 +41,7 @@ public class DataBaseCustomers {
         return customersObservableList;
     }
 
-    public static ObservableList<Appointments> getCustomerAppointment(int customerID){
+    public static ObservableList<Appointments> getCustomerAppt(int customerID){
         ObservableList<Appointments> customerAppointments = FXCollections.observableArrayList();
         DataBaseAppts dataBaseAppts = new DataBaseAppts();
 

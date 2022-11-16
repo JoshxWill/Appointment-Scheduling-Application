@@ -5,7 +5,7 @@
 <?import javafx.scene.text.*?>
 
 
-<AnchorPane prefHeight="519.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.view.CustomerForm">
+<AnchorPane prefHeight="519.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.controller.CustomerFormController">
    <children>
       <Text layoutX="264.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form">
          <font>

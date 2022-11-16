@@ -58,5 +58,6 @@ public class JDBC {
        }
 
 
-
+    public static Connection startConnection() {
+    }
 }

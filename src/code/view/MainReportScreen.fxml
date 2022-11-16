@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="418.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.view.MainReportScreen">
+<AnchorPane prefHeight="418.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.controller.MainReportScreenController">
    <children>
       <Label layoutX="146.0" layoutY="31.0" text="Infinity Corp Scheduling Application">
          <font>
