@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.controller.OverallReportController">
    <children>
       <Label layoutX="179.0" layoutY="43.0" text="Overall Appointment Report">
@@ -12,7 +11,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TableView layoutX="88.0" layoutY="127.0" prefHeight="200.0" prefWidth="424.0">
+      <TableView fx:id="OARTable" layoutX="88.0" layoutY="127.0" prefHeight="200.0" prefWidth="424.0">
         <columns>
           <TableColumn fx:id="OverallReportMonthColumn" prefWidth="147.0" text="Month" />
           <TableColumn fx:id="OverallReportTypeColumn" prefWidth="144.0" text="Type" />

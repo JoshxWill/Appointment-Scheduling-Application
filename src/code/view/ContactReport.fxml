@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.controller.ContactReportController">
    <children>
       <Label layoutX="271.0" layoutY="38.0" text="Contact Report">
@@ -12,7 +11,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TableView layoutX="25.0" layoutY="128.0" prefHeight="200.0" prefWidth="623.0">
+      <TableView fx:id="contactRT" layoutX="25.0" layoutY="128.0" prefHeight="200.0" prefWidth="623.0">
         <columns>
           <TableColumn fx:id="CRApptID" prefWidth="98.0" text="Appointment_ID" />
           <TableColumn fx:id="CRTitle" prefWidth="52.0" text="Title" />

@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="491.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.controller.UserScheduleReportController">
    <children>
-      <TableView layoutX="80.0" layoutY="104.0" prefHeight="283.0" prefWidth="687.0">
+      <TableView fx:id="userRT" layoutX="80.0" layoutY="104.0" prefHeight="283.0" prefWidth="687.0">
         <columns>
           <TableColumn fx:id="USRApptColumn" prefWidth="105.0" text="Appointment_ID" />
           <TableColumn fx:id="USRTitleColumn" prefWidth="79.0" text="Title" />
