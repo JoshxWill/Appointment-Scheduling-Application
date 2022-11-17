@@ -38,7 +38,10 @@ public class Customers {
         this.division = String.valueOf(division);
     }
 
-    public Customers(int customerID, String customerName, String address, String postal, String phone, int divisionID){}
+    public Customers(int id, String name, String address, String postal, String phone, int divisionID, String country){}
+
+    public Customers(int id, String customerName, String address, String postalCode, String phone, int divisionID) {
+    }
 
     /**Return all Customers from database**/
     public static ObservableList<Customers> getAllCustomers(){

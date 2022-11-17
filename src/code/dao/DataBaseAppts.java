@@ -56,7 +56,7 @@ public class DataBaseAppts {
         ObservableList<MonthlyReports> monthlyReports = FXCollections.observableArrayList();
 
         String appointmentSelected = "Select count(Title) as Count, Type, MONTHNAME(Start) as mn, MONTH(Start) as Month from appointments where monthname(Start) = '" + monthSelected + "' group by MONTH(Start), mn, Type order by Month;";
-        PreparedStatement preparedStatement = JDBC.startConnection().prepareStatement(appointmentSelected);
+        PreparedStatement preparedStatement = JDBC.makeConnection().prepareStatement(appointmentSelected);
         ResultSet resultset = preparedStatement.executeQuery();
 
         while (resultset.next()) {
@@ -175,7 +175,7 @@ public class DataBaseAppts {
     /**Deletes selected Appointment.**/
     public static void deleteAppointment(int appointmentID) throws SQLException{
         String deleteStatement = "Delete FROM appointments WHERE Appointment_ID = ?";
-        PreparedStatement preparedStatement = JDBC.startConnection().prepareStatement(deleteStatement);
+        PreparedStatement preparedStatement = JDBC.makeConnection().prepareStatement(deleteStatement);
         preparedStatement.setInt(1, appointmentID);
         preparedStatement.execute();
     }

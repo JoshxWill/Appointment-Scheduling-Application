@@ -16,7 +16,7 @@ public class JDBC {
         private static Connection connection = null;  // Connection Interface
         private static PreparedStatement preparedStatement;
 
-         public static void makeConnection() {
+         public static Connection makeConnection() {
 
           try {
               Class.forName(driver); // Locate Driver
@@ -25,11 +25,12 @@ public class JDBC {
               System.out.println("Connection successful!");
           }
                   catch(ClassNotFoundException e) {
-                      System.out.println("Error:" + e.getMessage());
+                      e.printStackTrace();
                   }
                   catch(SQLException e) {
-                      System.out.println("Error:" + e.getMessage());
+                      e.printStackTrace();
                   }
+                return connection;
           }
 
             public static Connection getConnection() {
@@ -43,21 +44,4 @@ public class JDBC {
                      System.out.println(e.getMessage());
                  }
              }
-
-       public static void makePreparedStatement(String sqlStatement, Connection conn) throws SQLException {
-           if (conn != null)
-               preparedStatement = conn.prepareStatement(sqlStatement);
-           else
-               System.out.println("Prepared Statement Creation Failed!");
-       }
-       public static PreparedStatement getPreparedStatement() throws SQLException {
-           if (preparedStatement != null)
-               return preparedStatement;
-           else System.out.println("Null reference to Prepared Statement");
-           return null;
-       }
-
-
-    public static Connection startConnection() {
-    }
 }

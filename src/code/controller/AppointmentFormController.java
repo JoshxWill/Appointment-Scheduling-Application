@@ -197,14 +197,14 @@ public class AppointmentFormController implements Initializable {
             System.out.println(ApptStartDate.getValue());
             System.out.println(StartTimeMenu.getValue());
             LocalDate localDate = ApptStartDate.getValue();
-            LocalTime localTime = LocalTime.parse((CharSequence) StartTimeMenu.getValue());
+            LocalTime localTime = LocalTime.parse(StartTimeMenu.getValue());
             Timestamp timestamp = Timestamp.valueOf(LocalDateTime.of(localDate, localTime));
             System.out.println("Start time: " + timestamp);
             //End Timestamp
             System.out.println(ApptEndDate.getValue());
             System.out.println(EndTimeMenu.getValue());
             LocalDate localDate1 = ApptEndDate.getValue();
-            LocalTime localTime1 = LocalTime.parse((CharSequence) EndTimeMenu.getValue());
+            LocalTime localTime1 = LocalTime.parse(EndTimeMenu.getValue());
             Timestamp timestamp1 = Timestamp.valueOf(LocalDateTime.of(localDate1, localTime1));
             System.out.println("End time: " + timestamp1);
 
@@ -328,7 +328,7 @@ public class AppointmentFormController implements Initializable {
 
         else {
 
-            int appointmentID1 = appointmentSelect.getAppointmentID();
+            int appointmentId = appointmentSelect.getAppointmentID();
 
             //Start Timestamp
             System.out.println(ApptStartDate.getValue());
