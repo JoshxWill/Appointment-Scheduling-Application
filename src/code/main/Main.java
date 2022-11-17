@@ -31,11 +31,12 @@ public class Main extends Application {
 
 
     public static void main(String[] args) throws SQLException {
+        JDBC.makeConnection();
         Connection connection = JDBC.getConnection();
         DatabaseQuery.setApptStatement(connection);
         Statement statement = DatabaseQuery.getApptStatement();
-        JDBC.makeConnection();
-        JDBC.closeConnection();
+
         launch(args);
+        JDBC.closeConnection();
     }
 }

@@ -1,7 +1,6 @@
 package code.utilities;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class JDBC {
@@ -14,7 +13,7 @@ public class JDBC {
         private static final String userName = "sqlUser"; // Username
         private static String password = "Passw0rd!"; // Password
         private static Connection connection = null;  // Connection Interface
-        private static PreparedStatement preparedStatement;
+
 
          public static Connection makeConnection() {
 
@@ -34,14 +33,16 @@ public class JDBC {
           }
 
             public static Connection getConnection() {
-                return connection;
+
+             return connection;
             }
-             public static void closeConnection() {
+
+            public static void closeConnection() {
                  try {
                      connection.close();
                      System.out.println("Connection closed!");
-                 } catch (SQLException e) {
-                     System.out.println(e.getMessage());
+                 }
+                 catch (Exception e) {
                  }
              }
 }
