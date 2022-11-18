@@ -34,8 +34,8 @@ public class MainFormScreenController implements Initializable {
     /**
      * Appointment Button initiates Appointment screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException Exception
      */
     @javafx.fxml.FXML
     public void MainScreenAppointmentBtn(ActionEvent actionEvent) throws IOException {
@@ -48,8 +48,8 @@ public class MainFormScreenController implements Initializable {
     /**
      * Customer Button initiates Customer Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException Exception
      */
     @javafx.fxml.FXML
     public void MainScreenCustomerBtn(ActionEvent actionEvent) throws IOException {
@@ -62,8 +62,8 @@ public class MainFormScreenController implements Initializable {
     /**
      * Report Button initiates Main Screen Report
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void MainScreenReportBtn(ActionEvent actionEvent) throws IOException {
@@ -76,8 +76,8 @@ public class MainFormScreenController implements Initializable {
     /**
      * Returns to Login Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void ReturnLoginForm(ActionEvent actionEvent) throws  IOException{

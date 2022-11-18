@@ -34,8 +34,8 @@ public class MainReportScreenController implements Initializable {
     /**
      * Returns to Main Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void ReturnMainScreen(ActionEvent actionEvent) throws IOException {
@@ -53,8 +53,8 @@ public class MainReportScreenController implements Initializable {
     /**
      * All Appointment Report
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException Exception
      */
     @javafx.fxml.FXML
     public void OverallCustomerApptBtn(ActionEvent actionEvent) throws IOException {
@@ -67,8 +67,8 @@ public class MainReportScreenController implements Initializable {
     /**
      * Contact Report Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void ContactScheduleReportBtn(ActionEvent actionEvent) throws IOException {
@@ -81,8 +81,8 @@ public class MainReportScreenController implements Initializable {
     /**
      * User Schedule Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void UserScheduleBtn(ActionEvent actionEvent) throws IOException{

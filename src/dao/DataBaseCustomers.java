@@ -12,7 +12,8 @@ import java.sql.SQLException;
 
 /**Database Customers Class**/
 public class DataBaseCustomers {
-    /**Returns all data from Customer database**/
+    /**Returns all data from Customer database
+     * @return All Customers**/
     public static ObservableList<Customers> getAllCustomers(){
         ObservableList<Customers> customersObservableList = FXCollections.observableArrayList();
 
@@ -41,6 +42,11 @@ public class DataBaseCustomers {
         return customersObservableList;
     }
 
+    /**
+     *
+     * @param customerID ID
+     * @return Customer Appointments
+     */
     public static ObservableList<Appointments> getCustomerAppt(int customerID){
         ObservableList<Appointments> customerAppointments = FXCollections.observableArrayList();
         DataBaseAppts dataBaseAppts = new DataBaseAppts();

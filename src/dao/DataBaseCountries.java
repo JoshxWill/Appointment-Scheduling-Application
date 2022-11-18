@@ -11,7 +11,8 @@ import java.sql.SQLException;
 
 /**Countries Database Class**/
 public class DataBaseCountries {
-    /**Returns all data from Countries database**/
+    /**Returns all data from Countries database
+     * @return All Countries**/
     public static ObservableList<Countries> getAllCountries(){
 
         ObservableList<Countries> countriesObservableList = FXCollections.observableArrayList();

@@ -12,7 +12,8 @@ import java.sql.SQLException;
 
 /**Database Contacts Class**/
 public class DataBaseContacts {
-    /**Returns all from Contacts Database**/
+    /**Returns all from Contacts Database
+     * @return All Contacts**/
     public static ObservableList<Contacts> getAllContacts(){
         ObservableList<Contacts> contactsObservableList = FXCollections.observableArrayList();
 
@@ -34,7 +35,9 @@ public class DataBaseContacts {
         return contactsObservableList;
     }
 
-    /**Finds Appointments by Contact ID**/
+    /**Finds Appointments by Contact ID
+     * @param contactID ID
+     * @return Contact Appointments**/
     public static ObservableList<Appointments> getContactsAppts(int contactID){
         ObservableList<Appointments> apptContactResult = FXCollections.observableArrayList();
         DataBaseAppts dataBaseAppts = new DataBaseAppts();

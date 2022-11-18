@@ -33,7 +33,11 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
+    /**
+     *
+     * @param args Launch Program
+     * @throws SQLException SQL Loader
+     */
     public static void main(String[] args) throws SQLException {
         JDBC.makeConnection();
         Connection connection = JDBC.getConnection();

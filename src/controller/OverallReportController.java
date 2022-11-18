@@ -44,15 +44,12 @@ public class OverallReportController implements Initializable {
     Parent scene;
     Stage stage;
 
-    @javafx.fxml.FXML
-    public void OARMonthMenu(ActionEvent actionEvent) {
-    }
 
     /**
      * Activate Results Button to show selected month report
      *
-     * @param actionEvent
-     * @throws SQLException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
      */
     @FXML
     public void SeeMonthBtn(ActionEvent actionEvent) throws SQLException {
@@ -64,8 +61,8 @@ public class OverallReportController implements Initializable {
     /**
      * Returns To Main Report Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void ReturnReportScreen(ActionEvent actionEvent) throws IOException {

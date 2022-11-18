@@ -14,7 +14,10 @@ import java.sql.Timestamp;
 
 /**Database Appointments Class**/
 public class DataBaseAppts {
-    /**Returns all Appointment data**/
+    /**
+     * Returns all Appointment Data
+     * @return All Appointments
+     */
     public  static ObservableList<Appointments> getAllAppointments(){
         ObservableList<Appointments> appointmentsObservableList = FXCollections.observableArrayList();
 
@@ -51,7 +54,12 @@ public class DataBaseAppts {
         return appointmentsObservableList;
     }
 
-    /**Get appointments from database and organize them by monthly report.**/
+    /**
+     * Get appointments from database and organize them by monthly report.
+     * @param monthSelected Selected Month
+     * @return Month, Type
+     * @throws SQLException SQL Loader
+     */
     public static ObservableList<MonthlyReports> getApptByMonthAndType(String monthSelected) throws SQLException{
         ObservableList<MonthlyReports> monthlyReports = FXCollections.observableArrayList();
 
@@ -73,11 +81,11 @@ public class DataBaseAppts {
     /**
      * Checks Appointment Overlapping
      *
-     * @param startDT
-     * @param endDT
-     * @param customerID
-     * @return
-     * @throws SQLException
+     * @param startDT Start Date/Time
+     * @param endDT End Date/Time
+     * @param customerID Customer ID
+     * @return Return
+     * @throws SQLException SQL Exception
      */
     public static Appointments checkApptOverlap(Timestamp startDT, Timestamp endDT, int customerID) throws SQLException{
         Appointments apptOverlap = null;
@@ -99,8 +107,8 @@ public class DataBaseAppts {
     /**
      * When month radio button selected:
      * Organize appointments by recent week when month radio button toggled
+     * @return Current Week Appointments
      */
-
     public static ObservableList<Appointments> getCurrentWeekAppts(){
         ObservableList<Appointments> weeklyAppts = FXCollections.observableArrayList();
 
@@ -142,6 +150,7 @@ public class DataBaseAppts {
     /**
      * When month radio selected:
      * Organize current month in appointment table
+     * @return Current Month Appointments
      */
     public static ObservableList<Appointments> getCurrentMonthAppts(){
         ObservableList<Appointments> monthlyAppts = FXCollections.observableArrayList();
@@ -180,7 +189,9 @@ public class DataBaseAppts {
         return monthlyAppts;
     }
 
-    /**Deletes selected Appointment.**/
+    /**Deletes selected Appointment.
+     * @param appointmentID ID
+     * @throws SQLException SQL Loader**/
     public static void deleteAppointment(int appointmentID) throws SQLException{
         String deleteStatement = "Delete FROM appointments WHERE Appointment_ID = ?";
         PreparedStatement preparedStatement = JDBC.makeConnection().prepareStatement(deleteStatement);

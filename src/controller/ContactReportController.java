@@ -57,8 +57,8 @@ public class ContactReportController implements Initializable {
     /**
      * Returns to Main Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXMLLoader
      */
     @javafx.fxml.FXML
     public void ReturnReportScreen(ActionEvent actionEvent) throws IOException {
@@ -73,15 +73,12 @@ public class ContactReportController implements Initializable {
         stage.show();
     }
 
-    @javafx.fxml.FXML
-    public void CRContactMenu(ActionEvent actionEvent) {
-    }
 
     /**
      * Show Results Button
      *
-     * @param actionEvent
-     * @throws SQLException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
      */
     @javafx.fxml.FXML
     public void ResultBtn(ActionEvent actionEvent) throws SQLException {

@@ -84,30 +84,11 @@ public class CustomerFormController implements Initializable {
     Parent scene;
     Stage stage;
 
-    @javafx.fxml.FXML
-    public void txtCustomerID(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void txtCustomerName(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void txtCustomerPhone(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void txtCustomerAddress(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void txtCustomerPostalCode(ActionEvent actionEvent) {
-    }
 
     /**
      * Country ComboBox Selection Functionality
      *
-     * @param actionEvent
+     * @param actionEvent Event
      */
     @javafx.fxml.FXML
     public void CustomerCountryBox(ActionEvent actionEvent) {
@@ -119,16 +100,13 @@ public class CustomerFormController implements Initializable {
         CustomerDivisionBox.getSelectionModel().selectFirst();
     }
 
-    @javafx.fxml.FXML
-    public void CustomerDivisionBox(ActionEvent actionEvent) {
-    }
 
     /**
      * Customer Add Button Functionality
      *
-     * @param actionEvent
-     * @throws SQLException
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXMLLoader
      */
     @javafx.fxml.FXML
     public void CustomerAddBtn(ActionEvent actionEvent) throws SQLException, IOException {
@@ -181,9 +159,9 @@ public class CustomerFormController implements Initializable {
     /**
      * Select Customer Button Functionality
      *
-     * @param actionEvent
-     * @throws SQLException
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXMLLoader
      */
     @javafx.fxml.FXML
     public void SelectCustomerBtn(ActionEvent actionEvent) throws SQLException, IOException {
@@ -234,9 +212,9 @@ public class CustomerFormController implements Initializable {
     /**
      * Customer Update Button Functionality
      *
-     * @param actionEvent
-     * @throws SQLException
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXMLLoader
      */
     @javafx.fxml.FXML
     public void UpdateCustomerBtn(ActionEvent actionEvent) throws SQLException, IOException {
@@ -297,9 +275,9 @@ public class CustomerFormController implements Initializable {
     /**
      * Customer Delete Button Functionality
      *
-     * @param actionEvent
-     * @throws SQLException
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXMLLoader
      */
     @javafx.fxml.FXML
     public void DeleteCustomerBtn(ActionEvent actionEvent) throws SQLException, IOException {
@@ -370,7 +348,7 @@ public class CustomerFormController implements Initializable {
     /**
      * Table Refresh Listing Customers
      *
-     * @param actionEvent
+     * @param actionEvent Event
      */
     @FXML
     public void customerData (ActionEvent actionEvent){
@@ -380,8 +358,8 @@ public class CustomerFormController implements Initializable {
     /**
      * Customer Cancel Button Functionality
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXMLLoader
      */
     @javafx.fxml.FXML
     public void CancelCustomerBtn(ActionEvent actionEvent) throws IOException {
@@ -396,7 +374,10 @@ public class CustomerFormController implements Initializable {
         stage.show();
     }
 
-    /**Fills out fields/ Aids selected Customer Table**/
+    /**
+     * Fills out fields/ Aids selected Customer Table
+     * @param customers Customers
+     */
     public void getCustomerModify(Customers customers){
         CustomerIDTxtBox.setText(Integer.toString(customers.getCustomerID()));
         NameTxt.setText(customers.getCustomerName());

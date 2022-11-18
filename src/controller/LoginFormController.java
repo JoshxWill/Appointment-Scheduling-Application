@@ -59,18 +59,12 @@ public class LoginFormController implements Initializable {
 
     Locale locale = Locale.getDefault();
 
-    @javafx.fxml.FXML
-    public void txtUsername(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void txtPassword(ActionEvent actionEvent) {
-    }
 
     /**
      * Submit Button Functionality
-     * @param actionEvent
-     * @return
+     * @param actionEvent event
+     * @return resourceB
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public boolean SubmitBtn(ActionEvent actionEvent) throws IOException {
@@ -157,7 +151,8 @@ public class LoginFormController implements Initializable {
         return false;
     }
 
-    /**Log for Successful Login**/
+    /**Log for Successful Login
+     * @param username User Name**/
     public static void fileSuccessLog(String username){
         try {
             String loginLog = "login_activity.txt";
@@ -176,7 +171,8 @@ public class LoginFormController implements Initializable {
         }
     }
 
-    /**Log for Unsuccessful Login**/
+    /**Log for Unsuccessful Login
+     * @param username User Name **/
     public static void fileInvalidLog(String username){
         try {
             String loginLog = "login_activity.txt";
@@ -195,9 +191,13 @@ public class LoginFormController implements Initializable {
         }
     }
 
+    /**
+     * Users Database
+     */
     public static DataBaseUsers userdata = new DataBaseUsers();
 
-    /**Upcoming Appointments (15 min)**/
+    /**Upcoming Appointments (15 min)
+     * @return Upcoming Appointment**/
     public ObservableList<Appointments> upcomingAppt15(){
         ObservableList<Appointments> allAppt = DataBaseAppts.getAllAppointments();
         ObservableList<Appointments> upcomingAppt = FXCollections.observableArrayList();
@@ -221,7 +221,7 @@ public class LoginFormController implements Initializable {
 
     /**
      * Exit Button Functionality
-     * @param actionEvent
+     * @param actionEvent Event
      */
     @javafx.fxml.FXML
     public void ExitBtn(ActionEvent actionEvent) {

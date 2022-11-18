@@ -8,33 +8,39 @@ public class FirstLevelDivisions extends DataBaseDivisions {
     private int divisionID;
     private String divisionName;
 
-    /**First-Level Divisions Constructor**/
+    /**
+     * First-Level Divisions Constructor
+     * @param countryID Country ID
+     * @param divisionID Division ID
+     * @param divisionName Division Name
+     */
     public FirstLevelDivisions(int countryID, int divisionID, String divisionName){
         this.countryID = countryID;
         this.divisionID = divisionID;
         this.divisionName = divisionName;
     }
 
-    public FirstLevelDivisions(int divisionID, String divisionName, int countryID) {
-        super();
-    }
 
-    /**Getter for countryID**/
+    /**Getter for countryID
+     * @return Country ID**/
     public int getCountryID() {
         return countryID;
     }
 
-    /**Getter for First Level Division ID**/
+    /**Getter for First Level Division ID
+     * @return Division ID**/
     public int getDivisionID() {
         return divisionID;
     }
 
-    /**Getter for First Level Division Name**/
+    /**Getter for First Level Division Name
+     * @return Division Name**/
     public String getDivisionName() {
         return divisionName;
     }
 
-    /**Overrides toString method for Menu box**/
+    /**Overrides toString method for Menu box
+     * @return Division Name**/
     @Override
     public String toString(){
         return (divisionName);

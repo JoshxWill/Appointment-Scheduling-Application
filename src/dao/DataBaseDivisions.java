@@ -14,6 +14,10 @@ public class DataBaseDivisions {
     /**Returns all data from First Level Divisions**/
     private static final ObservableList<DataBaseDivisions> allFirstDivisions = FXCollections.observableArrayList();
 
+    /**
+     * Getter All Divisions
+     * @return All Divisions
+     */
     public static ObservableList<FirstLevelDivisions> getAllFirstDivisions (){
         ObservableList<FirstLevelDivisions> firstLevelDivisionsObservableList = FXCollections.observableArrayList();
         try {
@@ -37,6 +41,10 @@ public class DataBaseDivisions {
     /**Returns all First Level Divisions in UK**/
     private static final ObservableList<FirstLevelDivisions> divisionsUK = FXCollections.observableArrayList();
 
+    /**
+     * Getter All UK Divisions
+     * @return UK Divisions
+     */
     public static ObservableList<FirstLevelDivisions> getAllUKDivisions(){
         try {
             String sql = "SELECT * FROM client_schedule.first_level_divisions\n" +
@@ -60,6 +68,10 @@ public class DataBaseDivisions {
     /**Return all data from first leve divisions in Canada**/
     private static final ObservableList<FirstLevelDivisions> canadaDivision = FXCollections.observableArrayList();
 
+    /**
+     * Getter All Canada
+     * @return All Canada Divisions
+     */
     public static ObservableList<FirstLevelDivisions> getAllCanadaDivisions (){
         try {
             String sql = "SELECT * FROM client_schedule.first_level_divisions\n" +
@@ -83,6 +95,10 @@ public class DataBaseDivisions {
     /**Return all data from first leve divisions in United States**/
     private static final ObservableList<FirstLevelDivisions> USDivision = FXCollections.observableArrayList();
 
+    /**
+     * Getter All US Divisions
+     * @return US Divisions
+     */
     public static ObservableList<FirstLevelDivisions> getAllUSDivisions (){
         try {
             String sql = "SELECT * FROM client_schedule.first_level_divisions\n" +

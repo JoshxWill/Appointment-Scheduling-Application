@@ -51,14 +51,12 @@ public class UserScheduleReportController implements Initializable {
     Parent scene;
     Stage stage;
 
-    @javafx.fxml.FXML
-    public void SelectUserMenu(ActionEvent actionEvent) {
-    }
+
 
     /**
      * Activate Results Button to show selected User
      *
-     * @param actionEvent
+     * @param actionEvent Event
      */
     @javafx.fxml.FXML
     public void USRResultsBtn(ActionEvent actionEvent) {
@@ -70,8 +68,8 @@ public class UserScheduleReportController implements Initializable {
     /**
      * Returns to Main Report Screen
      *
-     * @param actionEvent
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws IOException FXML Exception
      */
     @javafx.fxml.FXML
     public void ReturnReportScreen(ActionEvent actionEvent) throws IOException {

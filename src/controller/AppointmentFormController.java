@@ -110,43 +110,12 @@ public class AppointmentFormController implements Initializable {
     @FXML
     private Button CancelAppt;
 
-    @FXML
-    public void ApptIDGen(ActionEvent actionEvent) {
 
-    }
-
-    @FXML
-    public void txtTitleBox(ActionEvent actionEvent) {
-    }
-
-    public void txtDescriptionBox(ActionEvent actionEvent) {
-    }
-
-    public void txtLocationBox(ActionEvent actionEvent) {
-    }
-
-    public void ContactMenu(ActionEvent actionEvent) {
-    }
-
-    public void CustomerIDMenu(ActionEvent actionEvent) {
-    }
-
-    public void UserIDMenu(ActionEvent actionEvent) {
-    }
-
-    public void RadioApptViewWeekBtn(ActionEvent actionEvent) {
-    }
-
-    public void RadioApptViewMonthBtn(ActionEvent actionEvent) {
-    }
-
-    public void RadioApptViewAllBtn(ActionEvent actionEvent) {
-    }
 
     /**
      * Show Button Functionality (Week, Month, All)
      *
-     * @param actionEvent
+     * @param actionEvent Event
      */
     @FXML
     public void ApptShowViewBtn(ActionEvent actionEvent) {
@@ -166,22 +135,13 @@ public class AppointmentFormController implements Initializable {
         }
     }
 
-    public void ApptStartDate(ActionEvent actionEvent) {
-    }
-
-    public void StartTimeMenu(ActionEvent actionEvent) {
-    }
-
-    public void ApptEndDate(ActionEvent actionEvent) {
-    }
-
-    public void EndTimeMenu(ActionEvent actionEvent) {
-    }
 
     /**
      * Add New Appointment
      *
-     * @param actionEvent
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXML Loader
      */
     @FXML
     public void ApptAddBtn(ActionEvent actionEvent) throws SQLException, IOException {
@@ -270,9 +230,9 @@ public class AppointmentFormController implements Initializable {
     /**
      * Select Appointment from database
      *
-     * @param actionEvent
-     * @throws IOException
-     * @throws SQLException
+     * @param actionEvent Event
+     * @throws IOException FXMLLoader
+     * @throws SQLException SQLLoader
      */
     @FXML
     public void SelectApptBtn(ActionEvent actionEvent) throws IOException, SQLException {
@@ -311,9 +271,9 @@ public class AppointmentFormController implements Initializable {
 
     /**
      * Update Button Functionality
-     * @param actionEvent
-     * @throws SQLException
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXMLLoader
      */
     @FXML
     public void UpdateApptBtn(ActionEvent actionEvent) throws SQLException, IOException {
@@ -404,9 +364,9 @@ public class AppointmentFormController implements Initializable {
     /**
      * Delete Appointment Button
      *
-     * @param actionEvent
-     * @throws SQLException
-     * @throws IOException
+     * @param actionEvent Event
+     * @throws SQLException SQLLoader
+     * @throws IOException FXMLLoader
      */
         @FXML
         public void DeleteApptBtn (ActionEvent actionEvent) throws SQLException, IOException {
@@ -452,8 +412,8 @@ public class AppointmentFormController implements Initializable {
 
         /**
          * Cancel Button Functionality
-         * @param actionEvent
-         * @throws IOException
+         * @param actionEvent Event
+         * @throws IOException FXMLLoader
          */
         @FXML
         public void CancelApptBtn (ActionEvent actionEvent) throws IOException {
@@ -479,7 +439,8 @@ public class AppointmentFormController implements Initializable {
             }
         }
 
-        /**Method that fills out boxes for selected Customer table**/
+        /**Method that fills out boxes for selected Customer table
+         * @param appointments Appointments**/
         @FXML
         public void getAppointmentModify (Appointments appointments){
             appointmentSelect = appointments;
@@ -527,8 +488,8 @@ public class AppointmentFormController implements Initializable {
 
     /**
      * Display all Appointments
-     * @param url
-     * @param resourceBundle
+     * @param url URL
+     * @param resourceBundle RB
      */
         @Override
         public void initialize (URL url, ResourceBundle resourceBundle){

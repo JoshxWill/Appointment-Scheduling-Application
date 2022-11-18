@@ -9,52 +9,59 @@ public class Users {
     private String userName;
     private String password;
 
-    /**Users Constructors**/
+    /**Users Constructors
+     * @param userID ID
+     * @param userName Name
+     * @param password Password **/
     public Users(int userID, String userName, String password){
         this.userID = userID;
         this.userName = userName;
         this.password = password;
     }
 
-    /**Return all Users from database**/
+    /**Return all Users from database
+     * @return All Users **/
     public static ObservableList<Users> getAllUsers(){
         return DataBaseUsers.getAllUsers();
     }
 
-    /**Getter for userID**/
+    /**Getter for userID
+     * @return User ID**/
     public int getUserID() {
         return userID;
     }
 
     /**
      * Setter for userID
-     * @param userID
+     * @param userID User ID
      */
     public void setUserID(int userID){
         this.userID = userID;
     }
 
-    /**Getter for userName**/
+    /**Getter for userName
+     * @return User Name**/
     public String getUserName() {
         return userName;
     }
 
     /**Setter for userName
-     * @param userName
+     * @param userName User Name
      */
 
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    /**Getter for password**/
+    /**Getter for password
+     * @return Password**/
     public String getPassword() {
         return password;
     }
 
     /**
      * Setter for password
-     * @param password
+     * @param password Password
      */
 
     public void setPassword(String password) {

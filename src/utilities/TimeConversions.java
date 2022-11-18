@@ -8,6 +8,12 @@ import java.time.ZonedDateTime;
 
 /**Time Conversions Class**/
 public class TimeConversions {
+    /**
+     * Time Conversion
+     *
+     * @param UTC Universal Time
+     * @return Local Time
+     */
     public static Timestamp UTCtoLocal(Timestamp UTC){
         LocalDateTime localDateTime0 = UTC.toLocalDateTime();
         ZonedDateTime zonedDateTime0 = localDateTime0.atZone(ZoneId.of("UTC"));
@@ -17,6 +23,11 @@ public class TimeConversions {
         return timestamp;
     }
 
+    /**
+     * Time Conversion
+     * @param UTC Universal Time
+     * @return Local Time
+     */
     public static Timestamp UTCtoLocal1(Timestamp UTC){
         LocalDateTime localDateTime0 = UTC.toLocalDateTime();
         ZonedDateTime zonedDateTime0 = localDateTime0.atZone(ZoneId.systemDefault());

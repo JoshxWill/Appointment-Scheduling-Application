@@ -14,6 +14,10 @@ import java.sql.SQLException;
 public class DataBaseUsers {
     private static String userLog;
 
+    /**
+     * Getter All Users
+     * @return All Users
+     */
     public static ObservableList<Users> getAllUsers(){
         ObservableList<Users> usersObservableList = FXCollections.observableArrayList();
 
@@ -35,7 +39,12 @@ public class DataBaseUsers {
         return usersObservableList;
     }
 
-    /**Get User ID from user database**/
+    /**
+     * Get User ID from user database
+     * @param username Username
+     * @param password Password
+     * @return Login
+     */
     public static boolean getUserLogIn(String username, String password){
         try {
             String sql = "SELECT User_Name, Password from users";
@@ -53,7 +62,11 @@ public class DataBaseUsers {
         }
     }
 
-    /**Finds Appointments by User ID**/
+    /**
+     * Finds Appointments by User ID
+     * @param userID ID
+     * @return Appointments By User
+     */
     public static ObservableList<Appointments> getAppointmentsByUser(int userID){
         ObservableList<Appointments> userAppointmentResults = FXCollections.observableArrayList();
         DataBaseAppts dataBaseAppts = new DataBaseAppts();
