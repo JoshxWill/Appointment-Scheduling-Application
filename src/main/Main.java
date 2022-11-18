@@ -1,5 +1,6 @@
 package main;
 
+import javafx.fxml.FXMLLoader;
 import utilities.DatabaseQuery;
 import utilities.JDBC;
 import javafx.application.Application;
@@ -7,11 +8,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static javafx.fxml.FXMLLoader.load;
+
 
 
 /**
@@ -24,9 +26,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = load(getClass().getResource("/view/LoginForm.fxml"));
-        primaryStage.setTitle("Appointment Scheduler");
-        primaryStage.setScene(new Scene(root));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/LoginForm.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
