@@ -441,7 +441,7 @@ public class AppointmentFormController implements Initializable {
 
         /**Method that fills out boxes for selected Customer table
          * @param appointments Appointments**/
-        @FXML
+        @Deprecated
         public void getAppointmentModify (Appointments appointments){
             appointmentSelect = appointments;
 
@@ -536,5 +536,61 @@ public class AppointmentFormController implements Initializable {
             EndTimeMenu.getSelectionModel().selectNext();
 
         }
+
+    @FXML
+    public void ApptIDGen(ActionEvent actionEvent) {
     }
+
+    @FXML
+    public void txtTitleBox(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtDescriptionBox(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtLocationBox(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void ContactMenu(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void CustomerIDMenu(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void UserIDMenu(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void RadioApptViewWeekBtn(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void RadioApptViewMonthBtn(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void RadioApptViewAllBtn(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void ApptStartDate(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void StartTimeMenu(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void ApptEndDate(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void EndTimeMenu(ActionEvent actionEvent) {
+    }
+}
 

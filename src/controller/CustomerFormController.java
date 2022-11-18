@@ -433,4 +433,27 @@ public class CustomerFormController implements Initializable {
         customerSelect = new Customers(0, null, null, null, null, null, null);
     }
 
+    @FXML
+    public void txtCustomerID(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtCustomerName(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtCustomerPhone(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtCustomerAddress(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtCustomerPostalCode(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void CustomerDivisionBox(ActionEvent actionEvent) {
+    }
 }

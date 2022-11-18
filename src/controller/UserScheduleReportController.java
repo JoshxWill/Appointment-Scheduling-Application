@@ -98,4 +98,8 @@ public class UserScheduleReportController implements Initializable {
         USREndDTColumn.setCellValueFactory(new PropertyValueFactory<>("end"));
         USRCustomerIDColumn.setCellValueFactory(new PropertyValueFactory<>("customerID"));
     }
+
+    @javafx.fxml.FXML
+    public void SelectUserMenu(ActionEvent actionEvent) {
+    }
 }

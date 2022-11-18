@@ -102,6 +102,10 @@ public class ContactReportController implements Initializable {
         CREndDT.setCellValueFactory(new PropertyValueFactory<>("end"));
         CRCustomerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
     }
+
+    @FXML
+    public void CRContactMenu(ActionEvent actionEvent) {
+    }
 }
 
 

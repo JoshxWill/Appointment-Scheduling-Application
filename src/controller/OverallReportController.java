@@ -87,4 +87,8 @@ public class OverallReportController implements Initializable {
         OARMonth.setItems(months);
         OARMonth.getSelectionModel().selectFirst();
     }
+
+    @FXML
+    public void OARMonthMenu(ActionEvent actionEvent) {
+    }
 }

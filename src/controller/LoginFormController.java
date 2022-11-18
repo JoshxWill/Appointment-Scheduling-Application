@@ -270,4 +270,12 @@ public class LoginFormController implements Initializable {
         System.out.println(datetime);
         displayzone.setText(String.valueOf(localZoneId));
     }
+
+    @FXML
+    public void txtUsername(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void txtPassword(ActionEvent actionEvent) {
+    }
 }
