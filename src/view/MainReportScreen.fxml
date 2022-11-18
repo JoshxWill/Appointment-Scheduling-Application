@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="418.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainReportScreenController">
+   <children>
+      <Label layoutX="146.0" layoutY="31.0" text="Infinity Corp Scheduling Application">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="70.0" text="Report">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="113.0" text="Select Options:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="BackBtn" layoutX="275.0" layoutY="368.0" mnemonicParsing="false" onAction="#ReturnMainScreen" text="Back" />
+      <Button fx:id="OverallAppt" layoutX="202.0" layoutY="151.0" mnemonicParsing="false" onAction="#OverallCustomerApptBtn" prefHeight="62.0" prefWidth="196.0" text="Overall Appointments" />
+      <Button fx:id="ContactScheduleReport" layoutX="202.0" layoutY="222.0" mnemonicParsing="false" onAction="#ContactScheduleReportBtn" prefHeight="62.0" prefWidth="196.0" text="Contact Schedule" />
+      <Button fx:id="UserScheduleReport" layoutX="202.0" layoutY="292.0" mnemonicParsing="false" onAction="#UserScheduleBtn" prefHeight="62.0" prefWidth="196.0" text="User Schedule" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Label fx:id="schedulenamelabel" layoutX="146.0" layoutY="42.0" text="Infinity Corp Scheduling Application">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginlabel" layoutX="276.0" layoutY="97.0" text="Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LoginUserName" layoutX="226.0" layoutY="163.0" onAction="#txtUsername" promptText="Username" />
+      <TextField fx:id="LoginPassword" layoutX="226.0" layoutY="208.0" onAction="#txtPassword" promptText="Password" />
+      <Button fx:id="LoginSubmitBtn" layoutX="224.0" layoutY="286.0" mnemonicParsing="false" onAction="#SubmitBtn" text="Submit" />
+      <Button fx:id="LoginExit" layoutX="324.0" layoutY="286.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+      <Text fx:id="TimeZoneID" layoutX="196.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Zone" />
+      <Label fx:id="displayzone" layoutX="324.0" layoutY="347.0" prefHeight="17.0" prefWidth="142.0" />
+   </children>
+</AnchorPane>
