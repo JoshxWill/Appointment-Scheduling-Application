@@ -235,7 +235,10 @@ public class Appointments {
         this.contactName = contactName;
     }
 
-    /**Overrides method for Menu box**/
+    /**
+     * Overrides method for Menu box
+     * @throws SQLException
+     **/
     @Override
     public String toString(){
         return (type);

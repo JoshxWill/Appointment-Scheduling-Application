@@ -171,7 +171,7 @@ public class CustomerFormController implements Initializable {
                 System.out.println("Nothing changed");
 
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/CustomerForm.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
 
@@ -207,7 +207,7 @@ public class CustomerFormController implements Initializable {
 
         else {
             stage = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
-            FXMLLoader loader= new FXMLLoader(getClass().getResource("/view/CustomerForm.fxml"));
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("/src/code/view/CustomerForm.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -287,7 +287,7 @@ public class CustomerFormController implements Initializable {
                 System.out.println("No Change Occurred");
 
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/CustomerForm.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
         }
@@ -347,7 +347,7 @@ public class CustomerFormController implements Initializable {
             alert.showAndWait();
 
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/CustomerForm.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
         } catch (SQLException throwables) {
@@ -391,7 +391,7 @@ public class CustomerFormController implements Initializable {
         alert.showAndWait();
 
         stage = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/MainFormScreen.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/MainFormScreen.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }

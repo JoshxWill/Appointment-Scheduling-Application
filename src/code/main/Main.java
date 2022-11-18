@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 /**
  * Main Class: Opens Login Screen
  *
@@ -22,7 +23,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader fxmlLoader = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/src/code/view/LoginForm.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -31,10 +32,12 @@ public class Main extends Application {
 
 
     public static void main(String[] args) throws SQLException {
+
         JDBC.makeConnection();
         Connection connection = JDBC.getConnection();
         DatabaseQuery.setApptStatement(connection);
         Statement statement = DatabaseQuery.getApptStatement();
+
 
         launch(args);
         JDBC.closeConnection();

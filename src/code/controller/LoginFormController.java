@@ -127,7 +127,7 @@ public class LoginFormController implements Initializable {
             }
 
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/MainFormScreen.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/MainFormScreen.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
 

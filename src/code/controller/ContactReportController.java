@@ -68,7 +68,7 @@ public class ContactReportController implements Initializable {
         alert.showAndWait();
 
         stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/MainReportScreen.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/MainReportScreen.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }

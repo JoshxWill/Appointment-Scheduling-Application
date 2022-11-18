@@ -260,7 +260,7 @@ public class AppointmentFormController implements Initializable {
             else
                 System.out.println("No Change Occurred");
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/AppointmentForm.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/AppointmentForm.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
         }
@@ -276,7 +276,7 @@ public class AppointmentFormController implements Initializable {
      */
     @FXML
     public void SelectApptBtn(ActionEvent actionEvent) throws IOException, SQLException {
-        Appointments appointmentSelect = (Appointments) ApptTableView.getSelectionModel().getSelectedItem();
+        Appointments appointmentSelect = ApptTableView.getSelectionModel().getSelectedItem();
         int appointmentID = appointmentSelect.getAppointmentID();
         System.out.println("Appointment Button Selected");
 
@@ -286,12 +286,12 @@ public class AppointmentFormController implements Initializable {
             return;
         } else {
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/controller/AppointForm.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/src/code/view/AppointForm.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             AppointmentFormController controller = fxmlLoader.getController();
-            controller.getAppointmentModify((Appointments) ApptTableView.getSelectionModel().getSelectedItem());
+            controller.getAppointmentModify(ApptTableView.getSelectionModel().getSelectedItem());
             stage.show();
 
         }
@@ -386,7 +386,7 @@ public class AppointmentFormController implements Initializable {
             DatabaseQuery.setApptStatement(connection);
             Statement statement = DatabaseQuery.getApptStatement();
 
-            String statementUpdate = "UPDATE appointments SET Title = '" + title + "', Description = '" + description + "', Location = '" + location + "', Type = '" + type + "', Start = '" + TimeConversions.UTCtoLocal(timestamp) + "', End = '" + TimeConversions.UTCtoLocal1(timestamp1) + "', Customer_ID = '" + customerID +"', User_ID = '" + userID + "', Contact_ID = '" + contactID + "' WHERE Appointment_ID = '" + appointmentID + "'";
+            String statementUpdate = "UPDATE appointments SET Title = '" + title + "', Description = '" + description + "', Location = '" + location + "', Type = '" + type + "', Start = '" + TimeConversions.UTCtoLocal(timestamp) + "', End = '" + TimeConversions.UTCtoLocal1(timestamp1) + "', Customer_ID = '" + customerID +"', User_ID = '" + userID + "', Contact_ID = '" + contactID + "' WHERE Appointment_ID = '" + appointmentId + "'";
             System.out.println("Update statement: " + statementUpdate);
             statement.execute(statementUpdate);
 
@@ -395,7 +395,7 @@ public class AppointmentFormController implements Initializable {
             else
                 System.out.println("No Change Occurred");
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/AppointmentForm.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/AppointmentForm.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
         }
@@ -412,7 +412,7 @@ public class AppointmentFormController implements Initializable {
         public void DeleteApptBtn (ActionEvent actionEvent) throws SQLException, IOException {
             System.out.println("Delete Appointment Activated");
             Appointments appointmentSelect = ApptTableView.getSelectionModel().getSelectedItem();
-            int appointmentID = appointmentSelect.getAppointmentID();
+            int appointmentId = appointmentSelect.getAppointmentID();
 
             if(appointmentSelect == null){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -430,7 +430,7 @@ public class AppointmentFormController implements Initializable {
             DatabaseQuery.setApptStatement(connection);
             Statement statement = DatabaseQuery.getApptStatement();
 
-            String statementDelete = "DELETE FROM appointments where Appointment_ID = " + appointmentID + "";
+            String statementDelete = "DELETE FROM appointments where Appointment_ID = " + appointmentId + "";
             System.out.println("Delete statement: " + statementDelete);
             statement.execute(statementDelete);
 
@@ -445,7 +445,7 @@ public class AppointmentFormController implements Initializable {
             alert.showAndWait();
 
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/AppointmentForm.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/AppointmentForm.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
         }
@@ -463,7 +463,7 @@ public class AppointmentFormController implements Initializable {
             alert.showAndWait();
 
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            scene = FXMLLoader.load(getClass().getResource("/view/MainFormScreen.fxml"));
+            scene = FXMLLoader.load(getClass().getResource("/src/code/view/MainFormScreen.fxml"));
             stage.setScene(new Scene(scene));
             stage.show();
         }

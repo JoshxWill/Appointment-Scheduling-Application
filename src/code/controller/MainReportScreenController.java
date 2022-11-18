@@ -45,7 +45,7 @@ public class MainReportScreenController implements Initializable {
         alert.showAndWait();
 
         stage = (Stage)((Button) actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/MainFormScreen.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/MainFormScreen.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -59,7 +59,7 @@ public class MainReportScreenController implements Initializable {
     @javafx.fxml.FXML
     public void OverallCustomerApptBtn(ActionEvent actionEvent) throws IOException {
         stage = (Stage)((Button) actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/OverallAppointmentReport.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/OverallAppointmentReport.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -73,7 +73,7 @@ public class MainReportScreenController implements Initializable {
     @javafx.fxml.FXML
     public void ContactScheduleReportBtn(ActionEvent actionEvent) throws IOException {
         stage = (Stage)((Button) actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/ContactReport.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/ContactReport.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -87,7 +87,7 @@ public class MainReportScreenController implements Initializable {
     @javafx.fxml.FXML
     public void UserScheduleBtn(ActionEvent actionEvent) throws IOException{
         stage = (Stage)((Button) actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/UserScheduleReport.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/UserScheduleReport.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }

@@ -40,7 +40,7 @@ public class MainFormScreenController implements Initializable {
     @javafx.fxml.FXML
     public void MainScreenAppointmentBtn(ActionEvent actionEvent) throws IOException {
         stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/AppointmentForm.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/AppointmentForm.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -54,7 +54,7 @@ public class MainFormScreenController implements Initializable {
     @javafx.fxml.FXML
     public void MainScreenCustomerBtn(ActionEvent actionEvent) throws IOException {
         stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/CustomerForm.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -68,7 +68,7 @@ public class MainFormScreenController implements Initializable {
     @javafx.fxml.FXML
     public void MainScreenReportBtn(ActionEvent actionEvent) throws IOException {
         stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/MainReportScreen.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/MainReportScreen.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -82,7 +82,7 @@ public class MainFormScreenController implements Initializable {
     @javafx.fxml.FXML
     public void ReturnLoginForm(ActionEvent actionEvent) throws  IOException{
         stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/src/code/view/LoginForm.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
     }

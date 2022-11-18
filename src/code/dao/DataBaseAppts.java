@@ -70,7 +70,15 @@ public class DataBaseAppts {
         return monthlyReports;
     }
 
-    /**Checks Appointment Overlapping**/
+    /**
+     * Checks Appointment Overlapping
+     *
+     * @param startDT
+     * @param endDT
+     * @param customerID
+     * @return
+     * @throws SQLException
+     */
     public static Appointments checkApptOverlap(Timestamp startDT, Timestamp endDT, int customerID) throws SQLException{
         Appointments apptOverlap = null;
 
