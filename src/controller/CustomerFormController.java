@@ -423,12 +423,12 @@ public class CustomerFormController implements Initializable {
         CustomerCountryBox.setPromptText("Select Country");
         //Lambda Code #3
         CustomerID.setCellValueFactory((new PropertyValueFactory<>("customerID")));
-        CustomerName.setCellValueFactory(customers -> new SimpleStringProperty(customers.getValue().getCustomerName()));
-        CustomerPhoneNumber.setCellValueFactory(customers -> new SimpleStringProperty(customers.getValue().getPhone()));
-        CustomerCountry.setCellValueFactory(customers -> new SimpleStringProperty(customers.getValue().getCountry()));
+        CustomerName.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getCustomerName()));
+        CustomerPhoneNumber.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getPhone()));
+        CustomerCountry.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getCountry()));
         CustomerDivision.setCellValueFactory((new PropertyValueFactory<>("division")));
-        CustomerAddress.setCellValueFactory(customers -> new SimpleStringProperty(customers.getValue().getAddress()));
-        CustomerPostalCode.setCellValueFactory(customers -> new SimpleStringProperty(customers.getValue().getPostalCode()));
+        CustomerAddress.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getAddress()));
+        CustomerPostalCode.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getPostalCode()));
         customerTable.setItems(DataBaseCustomers.getAllCustomers());
         customerSelect = new Customers(0, null, null, null, null, null, null);
     }

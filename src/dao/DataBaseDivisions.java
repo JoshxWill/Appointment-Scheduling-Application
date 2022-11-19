@@ -28,9 +28,9 @@ public class DataBaseDivisions {
             while(resultSet.next()){
                 int divisionID = resultSet.getInt("Division_ID");
                 String divisionName = resultSet.getString("Division");
-                int countryID = resultSet.getInt("Country_ID");
-                FirstLevelDivisions firstLevelDivisions = new FirstLevelDivisions(divisionID, divisionName, countryID);
-                firstLevelDivisionsObservableList.add(firstLevelDivisions);
+                int countryID = resultSet.getInt("COUNTRY_ID");
+                FirstLevelDivisions FLD = new FirstLevelDivisions(divisionID, divisionName, countryID);
+                firstLevelDivisionsObservableList.add(FLD);
             }
         } catch (SQLException throwables){
             throwables.printStackTrace();
@@ -55,7 +55,7 @@ public class DataBaseDivisions {
             while (resultSet.next()) {
                 int divisionID = resultSet.getInt("Division_ID");
                 String divisionName = resultSet.getString("Division");
-                int countryID = resultSet.getInt("Country_ID");
+                int countryID = resultSet.getInt("COUNTRY_ID");
                 FirstLevelDivisions ukDivisions = new FirstLevelDivisions(divisionID, divisionName, countryID);
                 divisionsUK.add(ukDivisions);
             }
@@ -82,7 +82,7 @@ public class DataBaseDivisions {
             while (resultSet.next()){
                 int divisionID = resultSet.getInt("Division_ID");
                 String divisionName = resultSet.getString("Division");
-                int countryID = resultSet.getInt("Country_ID");
+                int countryID = resultSet.getInt("COUNTRY_ID");
                 FirstLevelDivisions canDivisions = new FirstLevelDivisions(divisionID, divisionName, countryID);
                 canadaDivision.add(canDivisions);
             }
@@ -109,7 +109,7 @@ public class DataBaseDivisions {
             while (resultSet.next()){
                 int divisionID = resultSet.getInt("Division_ID");
                 String divisionName = resultSet.getString("Division");
-                int countryID = resultSet.getInt("Country_ID");
+                int countryID = resultSet.getInt("COUNTRY_ID");
                 FirstLevelDivisions unitedDivisions = new FirstLevelDivisions(divisionID, divisionName, countryID);
                 USDivision.add(unitedDivisions);
             }

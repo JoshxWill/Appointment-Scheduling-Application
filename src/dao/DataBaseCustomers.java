@@ -18,9 +18,11 @@ public class DataBaseCustomers {
         ObservableList<Customers> customersObservableList = FXCollections.observableArrayList();
 
         try{
-            String sql ="Select customers.Customer_ID, customers.Customer_Name, customers.Address, customers.Postal_Code, customers.Phone, first_level_divisions.division, countries.Country, customers.Division_ID, first_level_divisions.COUNTRY_ID\n" +
-                    "FROM customers\n" + "join first_level_divisions on customers.Division_ID = first_level_divisions.Division_ID\n" +
-                    "join countries on first_level_divisions.Country_ID = countries.country_id;";
+            String sql = """
+                    Select customers.Customer_ID, customers.Customer_Name, customers.Address, customers.Postal_Code, customers.Phone, first_level_divisions.division, countries.Country, customers.Division_ID, first_level_divisions.COUNTRY_ID
+                    FROM customers
+                    join first_level_divisions on customers.Division_ID = first_level_divisions.Division_ID
+                    join countries on first_level_divisions.Country_ID = countries.country_id;""";
             PreparedStatement preparedStatement = JDBC.getConnection().prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
 

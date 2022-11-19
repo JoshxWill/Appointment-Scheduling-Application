@@ -20,10 +20,6 @@ public class FirstLevelDivisions extends DataBaseDivisions {
         this.divisionName = divisionName;
     }
 
-    public FirstLevelDivisions(int divisionID, String divisionName, int countryID) {
-        super();
-    }
-
 
     /**Getter for countryID
      * @return Country ID**/
