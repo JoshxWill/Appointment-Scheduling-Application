@@ -57,6 +57,7 @@ public class JDBC {
                      System.out.println("Connection closed!");
                  }
                  catch (Exception e) {
+                     e.printStackTrace();
                  }
              }
 }

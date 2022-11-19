@@ -18,3 +18,8 @@ User: sqlUser Unsuccessful Login: 2022-11-18 14:56:36.2488171
 User: sqlUser Unsuccessful Login: 2022-11-18 14:56:41.9489287
 User: Passw0rd! Unsuccessful Login: 2022-11-18 15:05:59.0364765
 User: sqlUser Unsuccessful Login: 2022-11-18 15:08:18.7903535
+User: sqlUser Unsuccessful Login: 2022-11-18 18:29:36.9652838
+User: sqlUser Unsuccessful Login: 2022-11-18 18:42:41.0639939
+User: sqlUser Unsuccessful Login: 2022-11-18 19:08:46.857795
+User: sqlUser Unsuccessful Login: 2022-11-18 19:10:30.700207
+User: sqlUser Unsuccessful Login: 2022-11-18 19:12:08.903619
