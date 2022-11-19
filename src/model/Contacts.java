@@ -46,7 +46,8 @@ public String getEmail(){
     return email;
 }
 
-/**Overrides method for Menu box**/
+/**Overrides method for Menu box
+ * @return Contact Name**/
 @Override
     public String toString(){
     return (contactName);

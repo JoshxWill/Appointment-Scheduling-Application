@@ -246,7 +246,7 @@ public class AppointmentFormController implements Initializable {
             return;
         } else {
             stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/AppointForm.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/AppointmentForm.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -441,7 +441,6 @@ public class AppointmentFormController implements Initializable {
 
         /**Method that fills out boxes for selected Customer table
          * @param appointments Appointments**/
-        @Deprecated
         public void getAppointmentModify (Appointments appointments){
             appointmentSelect = appointments;
 
@@ -459,10 +458,10 @@ public class AppointmentFormController implements Initializable {
             ContactMenu.setItems(contactsObservableList);
             Contacts contacts = null;
 
-            for (Contacts contacts1 : DataBaseContacts.getAllContacts()){
-                if (contacts.getContactName().equals(appointmentSelect.getContactName()))
+            for (Contacts contacts1 : DataBaseContacts.getAllContacts())
+                if (contacts1.getContactName().equals(appointmentSelect.getContactName())) {
                     contacts = contacts1;
-            }
+                }
 
             ContactMenu.setValue(contacts);
             ObservableList<Customers> customersObservableList = Customers.getAllCustomers();

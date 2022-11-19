@@ -1,13 +1,13 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 
 import java.io.IOException;
 import java.net.URL;
@@ -28,6 +28,7 @@ public class MainFormScreenController implements Initializable {
     @javafx.fxml.FXML
     private Button SignOut;
 
+
     Parent scene;
     Stage stage;
 
@@ -39,7 +40,7 @@ public class MainFormScreenController implements Initializable {
      */
     @javafx.fxml.FXML
     public void MainScreenAppointmentBtn(ActionEvent actionEvent) throws IOException {
-        stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        stage = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/view/AppointmentForm.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
@@ -53,7 +54,7 @@ public class MainFormScreenController implements Initializable {
      */
     @javafx.fxml.FXML
     public void MainScreenCustomerBtn(ActionEvent actionEvent) throws IOException {
-        stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        stage = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
@@ -67,7 +68,7 @@ public class MainFormScreenController implements Initializable {
      */
     @javafx.fxml.FXML
     public void MainScreenReportBtn(ActionEvent actionEvent) throws IOException {
-        stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        stage = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/view/MainReportScreen.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
@@ -81,7 +82,7 @@ public class MainFormScreenController implements Initializable {
      */
     @javafx.fxml.FXML
     public void ReturnLoginForm(ActionEvent actionEvent) throws  IOException{
-        stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        stage = (Stage)((Button)actionEvent.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
         stage.setScene(new Scene(scene));
         stage.show();
