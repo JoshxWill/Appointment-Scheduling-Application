@@ -296,7 +296,7 @@ public class Appointments {
      * @return Contact Appointments
      * @throws SQLException SQLLoader
      */
-    public static ObservableList<Appointments> getContactAppointments (int contactID) throws SQLException{
+    public static ObservableList<Appointments> getContactAppointments (int contactID) throws SQLException {
         ObservableList<Appointments> contactAppointmentLists = FXCollections.observableArrayList();
         DataBaseAppts dataBaseAppts = new DataBaseAppts();
 

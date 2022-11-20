@@ -98,8 +98,8 @@ public class ContactReportController implements Initializable {
         CRTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
         CRDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         CRType.setCellValueFactory(new PropertyValueFactory<>("type"));
-        CRStartDT.setCellValueFactory(new PropertyValueFactory<>("start"));
-        CREndDT.setCellValueFactory(new PropertyValueFactory<>("end"));
+        CRStartDT.setCellValueFactory(new PropertyValueFactory<>("startDT"));
+        CREndDT.setCellValueFactory(new PropertyValueFactory<>("endDT"));
         CRCustomerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
     }
 

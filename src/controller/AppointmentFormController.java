@@ -499,12 +499,12 @@ public class AppointmentFormController implements Initializable {
             TitleColumn.setCellValueFactory((new PropertyValueFactory<>("title")));
             DescriptionColumn.setCellValueFactory((new PropertyValueFactory<>("description")));
             LocationColumn.setCellValueFactory((new PropertyValueFactory<>("location")));
-            ContactColumn.setCellValueFactory((new PropertyValueFactory<>("contact")));
+            ContactColumn.setCellValueFactory((new PropertyValueFactory<>("contactID")));
             TypeColumn.setCellValueFactory((new PropertyValueFactory<>("type")));
-            StartDTColumn.setCellValueFactory((new PropertyValueFactory<>("start")));
-            EndDTColumn.setCellValueFactory((new PropertyValueFactory<>("end")));
-            CustomerIDColumn.setCellValueFactory((new PropertyValueFactory<>("customer")));
-            UserIDColumn.setCellValueFactory((new PropertyValueFactory<>("user")));
+            StartDTColumn.setCellValueFactory((new PropertyValueFactory<>("startDT")));
+            EndDTColumn.setCellValueFactory((new PropertyValueFactory<>("endDT")));
+            CustomerIDColumn.setCellValueFactory((new PropertyValueFactory<>("customerID")));
+            UserIDColumn.setCellValueFactory((new PropertyValueFactory<>("userID")));
 
             ContactMenu.setPromptText("Select Contact");
             UserIDMenu.setPromptText("Select User");

@@ -94,8 +94,8 @@ public class UserScheduleReportController implements Initializable {
         USRTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         USRDescriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         USRTypeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
-        USRStartDTColumn.setCellValueFactory(new PropertyValueFactory<>("start"));
-        USREndDTColumn.setCellValueFactory(new PropertyValueFactory<>("end"));
+        USRStartDTColumn.setCellValueFactory(new PropertyValueFactory<>("startDT"));
+        USREndDTColumn.setCellValueFactory(new PropertyValueFactory<>("endDT"));
         USRCustomerIDColumn.setCellValueFactory(new PropertyValueFactory<>("customerID"));
     }
 

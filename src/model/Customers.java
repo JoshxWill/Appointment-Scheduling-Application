@@ -38,30 +38,18 @@ public class Customers {
     }
 
     /**
-     * Customers
-     * @param ID ID
-     * @param name Name
-     * @param address Address
-     * @param postal Postal
-     * @param phone Phone
-     * @param country Country
-     * @param divisionID First Level ID
-     */
-    public Customers(int ID, String name, String address, String postal, String phone, String country, int divisionID){ }
-
-    /**
      *Customers
      *
      * @param customerID ID
-     * @param customerName Name
+     * @param name Name
      * @param address Address
      * @param postalCode Postal Code
      * @param phone Phone
      * @param division Division
      */
-    public Customers(int customerID, String customerName, String address, String postalCode, String phone, FirstLevelDivisions division){
-        this.customerID= customerID;
-        this.customerName = customerName;
+    public Customers(int customerID, String name, String address, String postalCode, String phone, FirstLevelDivisions division){
+        this.customerID = customerID;
+        this.customerName = name;
         this.address = address;
         this.postalCode = postalCode;
         this.phone = phone;
@@ -83,14 +71,14 @@ public class Customers {
 
     /**
      * Customers
-     * @param id ID
-     * @param customerName Name
+     * @param customerID ID
+     * @param name Name
      * @param address Address
      * @param postalCode Postal Code
      * @param phone Phone
      * @param divisionID First Level ID
      */
-    public Customers(int id, String customerName, String address, String postalCode, String phone, int divisionID) {
+    public Customers(int customerID, String name, String address, String postalCode, String phone, int divisionID) {
     }
 
     /**Return all Customers from database

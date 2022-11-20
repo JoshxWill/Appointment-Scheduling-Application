@@ -14,10 +14,10 @@ public class FirstLevelDivisions extends DataBaseDivisions {
      * @param divisionID Division ID
      * @param divisionName Division Name
      */
-    public FirstLevelDivisions(int countryID, int divisionID, String divisionName){
-        this.countryID = countryID;
+    public FirstLevelDivisions(int divisionID, String divisionName, int countryID){
         this.divisionID = divisionID;
         this.divisionName = divisionName;
+        this.countryID = countryID;
     }
 
 

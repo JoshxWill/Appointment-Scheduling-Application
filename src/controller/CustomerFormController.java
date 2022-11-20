@@ -122,15 +122,15 @@ public class CustomerFormController implements Initializable {
             int id = 0;
 
             CustomerIDTxtBox.setText(String.valueOf(++id));
-            String customerName = NameTxt.getText();
+            String name = NameTxt.getText();
             String address = Addresstxt.getText();
-            String postalCode = PostalCodetxt.getText();
+            String postal = PostalCodetxt.getText();
             String phone = Phonetxt.getText();
             int divisionID = CustomerDivisionBox.getValue().getDivisionID();
             String country = CustomerCountry.getText();
 
 
-            Customers newCustomer = new Customers(id, customerName, address, postalCode, phone, divisionID, country);
+            Customers newCustomer = new Customers(id, name, address, postal, phone, divisionID, country);
 
 
             Connection connection = JDBC.getConnection();
@@ -138,7 +138,7 @@ public class CustomerFormController implements Initializable {
             Statement statement = DatabaseQuery.getApptStatement();
 
             String insertStatement = "INSERT INTO customers(Customer_Name, Address, Postal_Code , Phone,  Created_By,  Last_Updated_By, Division_ID) " +
-                    "VALUES('" + customerName + "', '" + address + "', '" + postalCode + "', '" + phone + "', " + "' admin', " + "  'admin' , '" + divisionID + "' )";
+                    "VALUES('" + name + "', '" + address + "', '" + postal + "', '" + phone + "', " + "' admin', " + "  'admin' , '" + divisionID + "' )";
 
             System.out.println("Insert statement: " + insertStatement);
             statement.execute(insertStatement);
@@ -166,7 +166,7 @@ public class CustomerFormController implements Initializable {
     @javafx.fxml.FXML
     public void SelectCustomerBtn(ActionEvent actionEvent) throws SQLException, IOException {
         Customers customerSelect = customerTable.getSelectionModel().getSelectedItem();
-        int customerID = customerSelect.getCustomerID();
+        int customerId = customerSelect.getCustomerID();
         String customerName = NameTxt.getText();
         String address = Addresstxt.getText();
         String postalCode = PostalCodetxt.getText();
@@ -198,7 +198,7 @@ public class CustomerFormController implements Initializable {
         DatabaseQuery.setApptStatement(connection);
         Statement statement = DatabaseQuery.getApptStatement();
 
-        String customerSelectStatement = "SELECT Customer_Name, Address, Postal_Code, Phone, Division_ID FROM customers where Customer_ID = " + customerID + "";
+        String customerSelectStatement = "SELECT Customer_Name, Address, Postal_Code, Phone, Division_ID FROM customers where Customer_ID = " + customerId + "";
         statement.execute(customerSelectStatement);
         System.out.println("SELECT Customer Statement: " + customerSelectStatement);
 
@@ -242,20 +242,20 @@ public class CustomerFormController implements Initializable {
             System.out.println("Update Button Activated");
 
             int customerID = Integer.parseInt(CustomerIDTxtBox.getText());
-            String customerName = NameTxt.getText();
+            String name = NameTxt.getText();
             String address = Addresstxt.getText();
-            String postal = PostalCodetxt.getText();
+            String postalCode = PostalCodetxt.getText();
             String phone = Phonetxt.getText();
             int divisionID = CustomerDivisionBox.getValue().getDivisionID();
 
 
-            Customers customerModify = new Customers(customerID, customerName, address, postal, phone, divisionID);
+            Customers customerModify = new Customers(customerID, name, address, postalCode, phone, divisionID);
 
             Connection connection = JDBC.getConnection();
             DatabaseQuery.setApptStatement(connection);
             Statement statement = DatabaseQuery.getApptStatement();
 
-            String updateStatement = "UPDATE customers SET Customer_Name = '" + customerName + "', Address = '" + address + "', Postal_Code = '" + postal + "', Phone = '" + phone + "', Division_ID = '" + divisionID + "'  WHERE Customer_ID = " + customerID + "";
+            String updateStatement = "UPDATE customers SET Customer_Name = '" + name + "', Address = '" + address + "', Postal_Code = '" + postalCode + "', Phone = '" + phone + "', Division_ID = '" + divisionID + "'  WHERE Customer_ID = " + customerId + "";
             System.out.println("Update statement: " + updateStatement);
             statement.execute(updateStatement);
 
@@ -282,7 +282,7 @@ public class CustomerFormController implements Initializable {
     @javafx.fxml.FXML
     public void DeleteCustomerBtn(ActionEvent actionEvent) throws SQLException, IOException {
         Customers customerSelected = customerTable.getSelectionModel().getSelectedItem();
-        int customerId = customerSelected.getCustomerID();
+        int customerID = customerSelected.getCustomerID();
         System.out.println("Delete Button Activated");
 
         if (customerSelected == null) {
@@ -307,7 +307,7 @@ public class CustomerFormController implements Initializable {
             DatabaseQuery.setApptStatement(connection);
             Statement statement = DatabaseQuery.getApptStatement();
 
-            String deleteStatement = "DELETE FROM customers where Customer_ID = " + customerId + "";
+            String deleteStatement = "DELETE FROM customers where Customer_ID = " + customerID + "";
 
             System.out.println("Delete statement: " + deleteStatement);
 
@@ -417,8 +417,11 @@ public class CustomerFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<Countries> allCountries = Countries.getAllCountries();
-        CustomerCountryBox.setItems(allCountries);
+
+        customerTable.setItems(DataBaseCustomers.getAllCustomers());
+        customerSelect = new Customers(0, null, null, null, null, null, null);
+
+
         CustomerDivisionBox.setPromptText("Select Division");
         CustomerCountryBox.setPromptText("Select Country");
         //Lambda Code #3
@@ -429,8 +432,10 @@ public class CustomerFormController implements Initializable {
         CustomerDivision.setCellValueFactory((new PropertyValueFactory<>("division")));
         CustomerAddress.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getAddress()));
         CustomerPostalCode.setCellValueFactory(customer -> new SimpleStringProperty(customer.getValue().getPostalCode()));
-        customerTable.setItems(DataBaseCustomers.getAllCustomers());
-        customerSelect = new Customers(0, null, null, null, null, null, null);
+
+        ObservableList<Countries> allCountries = Countries.getAllCountries();
+        CustomerCountryBox.setItems(allCountries);
+
     }
 
     @FXML
