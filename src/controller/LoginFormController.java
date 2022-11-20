@@ -152,6 +152,7 @@ public class LoginFormController implements Initializable {
     }
 
     /**Log for Successful Login
+     * Lambda Code #1 Below
      * @param username User Name**/
     public static void fileSuccessLog(String username){
         try {
@@ -172,6 +173,7 @@ public class LoginFormController implements Initializable {
     }
 
     /**Log for Unsuccessful Login
+     * Lambda Code #2 Below
      * @param username User Name **/
     public static void fileInvalidLog(String username){
         try {
@@ -246,7 +248,7 @@ public class LoginFormController implements Initializable {
             MRE.printStackTrace();
         }
 
-        LocalDate dateinParis = LocalDate.of(2022, 11, 16);
+        LocalDate dateinParis = LocalDate.of(2022, 11, 20);
         LocalTime timeinParis = LocalTime.of(3, 50);
         ZoneId zoneIdParis = ZoneId.of("Europe/Paris");
         ZonedDateTime zoneDateParis = ZonedDateTime.of(dateinParis, timeinParis, zoneIdParis);
@@ -256,18 +258,7 @@ public class LoginFormController implements Initializable {
         ZonedDateTime parisLocal = zoneDateParis.withZoneSameInstant(localZoneId);
         ZonedDateTime GMTtoLocalZDT = instantParis.atZone(localZoneId);
 
-        System.out.println("Local: " + ZonedDateTime.now());
-        System.out.println("Paris: " + zoneDateParis);
-        System.out.println("Paris to GMT: " + instantParis);
-        System.out.println("GMT to Local " + GMTtoLocalZDT);
-        System.out.println("GMT to LocalDate: " + GMTtoLocalZDT.toLocalDate());
-        System.out.println("GMT to LocalTime: " + GMTtoLocalZDT.toLocalTime());
 
-        String date = String.valueOf(GMTtoLocalZDT.toLocalDate());
-        String time = String.valueOf(GMTtoLocalZDT.toLocalTime());
-        String datetime = date + " " + time;
-
-        System.out.println(datetime);
         displayzone.setText(String.valueOf(localZoneId));
     }
 
