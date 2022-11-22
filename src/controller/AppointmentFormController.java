@@ -27,6 +27,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.ParseException;
 import java.time.*;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -142,6 +143,7 @@ public class AppointmentFormController implements Initializable {
      * @param actionEvent Event
      * @throws SQLException SQLLoader
      * @throws IOException FXML Loader
+     *
      */
     @FXML
     public void ApptAddBtn(ActionEvent actionEvent) throws SQLException, IOException {

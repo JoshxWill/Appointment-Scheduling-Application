@@ -34,6 +34,7 @@ import java.util.stream.Collectors;
 /**
  * Customer Form Class
  *
+ * Lambda Code #3 Below
  * @author Joshua Williams
  */
 public class CustomerFormController implements Initializable {
@@ -87,6 +88,7 @@ public class CustomerFormController implements Initializable {
 
     /**
      * Country ComboBox Selection Functionality
+     *
      *
      * @param actionEvent Event
      */
@@ -416,7 +418,8 @@ public class CustomerFormController implements Initializable {
     }
 
     /**
-     * Lambda Code #3 Below
+     * Lambda Code #3 Below - Gets String from customer table
+     *
      * @param url url
      * @param resourceBundle rb
      */

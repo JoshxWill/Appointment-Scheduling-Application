@@ -31,6 +31,8 @@ import java.util.TimeZone;
 
 /**
  * Login Screen Class
+ *
+ * Lambda Code #1/#2 Below (fileSuccessLog/fileInvalidLog)
  * @author Joshua Williams
  */
 public class LoginFormController implements Initializable {
@@ -152,7 +154,8 @@ public class LoginFormController implements Initializable {
     }
 
     /**Log for Successful Login
-     * Lambda Code #1 Below
+     *
+     * Lambda Code #1 - prints Login successful into login log
      * @param username User Name**/
     public static void fileSuccessLog(String username){
         try {
@@ -173,7 +176,8 @@ public class LoginFormController implements Initializable {
     }
 
     /**Log for Unsuccessful Login
-     * Lambda Code #2 Below
+     *
+     * Lambda Code #2 Below - prints Login unsuccessful into login log
      * @param username User Name **/
     public static void fileInvalidLog(String username){
         try {
