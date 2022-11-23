@@ -27,7 +27,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
-import java.text.ParseException;
 import java.time.*;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -213,7 +212,7 @@ public class AppointmentFormController implements Initializable {
             Statement statement = DatabaseQuery.getApptStatement();
 
             String statementInsert = "INSERT INTO appointments(Title, Description, Location, Type, Start, End, Created_By, Last_Updated_By, Customer_ID, User_ID, Contact_ID) " +
-                    "VALUES('" + title + "', '" + description + "', '" + location + "', '" + type + "', '" + TimeConversions.UTCtoLocal(timestamp) + "', '" + TimeConversions.UTCtoLocal1(timestamp1) + "', '" + userName + "', '" + userName + "', '" + customerID + "', '" + userID + "', '" + contactID + "')";
+                    "VALUES('" + title + "', '" + description + "', '" + location + "', '" + type + "', '" + TimeConversions.UTCtoLocal1(timestamp) + "', '" + TimeConversions.UTCtoLocal1(timestamp1) + "', '" + userName + "', '" + userName + "', '" + customerID + "', '" + userID + "', '" + contactID + "')";
             System.out.println("Insert statement: " + statementInsert);
             statement.execute(statementInsert);
 
@@ -348,7 +347,7 @@ public class AppointmentFormController implements Initializable {
             DatabaseQuery.setApptStatement(connection);
             Statement statement = DatabaseQuery.getApptStatement();
 
-            String statementUpdate = "UPDATE appointments SET Title = '" + title + "', Description = '" + description + "', Location = '" + location + "', Type = '" + type + "', Start = '" + TimeConversions.UTCtoLocal(timestamp) + "', End = '" + TimeConversions.UTCtoLocal1(timestamp1) + "', Customer_ID = '" + customerID +"', User_ID = '" + userID + "', Contact_ID = '" + contactID + "' WHERE Appointment_ID = '" + appointmentId + "'";
+            String statementUpdate = "UPDATE appointments SET Title = '" + title + "', Description = '" + description + "', Location = '" + location + "', Type = '" + type + "', Start = '" + TimeConversions.UTCtoLocal1(timestamp) + "', End = '" + TimeConversions.UTCtoLocal1(timestamp1) + "', Customer_ID = '" + customerID +"', User_ID = '" + userID + "', Contact_ID = '" + contactID + "' WHERE Appointment_ID = '" + appointmentId + "'";
             System.out.println("Update statement: " + statementUpdate);
             statement.execute(statementUpdate);
 
