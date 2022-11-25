@@ -445,7 +445,7 @@ public class AppointmentFormController implements Initializable {
         public void getAppointmentModify (Appointments appointments){
             appointmentSelect = appointments;
 
-            ApptIDGen.setText(Integer.toString(appointments.getCustomerID()));
+            ApptIDGen.setText(Integer.toString(appointments.getAppointmentID()));
             txtTitleBox.setText(appointments.getTitle());
             txtDescriptionBox.setText(appointments.getDescription());
             txtLocationBox.setText(appointments.getLocation());
@@ -455,6 +455,7 @@ public class AppointmentFormController implements Initializable {
             ApptEndDate.setValue(appointments.getStartDT().toLocalDateTime().toLocalDate());
             EndTimeMenu.setValue(String.valueOf(appointments.getEndDT().toLocalDateTime().toLocalTime()));
 
+
             ObservableList<Contacts> contactsObservableList = Contacts.getAllContacts();
             ContactMenu.setItems(contactsObservableList);
             Contacts contacts = null;
@@ -463,8 +464,9 @@ public class AppointmentFormController implements Initializable {
                 if (contacts1.getContactName().equals(appointmentSelect.getContactName())) {
                     contacts = contacts1;
                 }
-
             ContactMenu.setValue(contacts);
+
+
             ObservableList<Customers> customersObservableList = Customers.getAllCustomers();
             CustomerIDMenu.setItems(customersObservableList);
             Customers customers = null;
@@ -473,8 +475,9 @@ public class AppointmentFormController implements Initializable {
                 if (customers1.getCustomerName().equals(appointmentSelect.getCustomerName()))
                     customers = customers1;
             }
-
             CustomerIDMenu.setValue(customers);
+
+
             ObservableList<Users> usersObservableList = Users.getAllUsers();
             UserIDMenu.setItems(usersObservableList);
             Users users = null;
@@ -482,9 +485,9 @@ public class AppointmentFormController implements Initializable {
             for (Users users1 : DataBaseUsers.getAllUsers()){
                 if (users1.getUserName().equals(appointmentSelect.getUserName()))
                     users = users1;
-            }
+                }
             UserIDMenu.setValue(users);
-        }
+            }
 
     /**
      * Display all Appointments

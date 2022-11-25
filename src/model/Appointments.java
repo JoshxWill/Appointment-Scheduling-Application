@@ -85,7 +85,8 @@ public class Appointments {
         this.contactID = contactID;
     }
 
-   /**Return all Appointments from database
+
+    /**Return all Appointments from database
     * @return getAllAppointments Return All Appointments**/
    public static ObservableList<Appointments> getAllAppointments(){
        return DataBaseAppts.getAllAppointments();
