@@ -194,13 +194,15 @@ public class AppointmentFormController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Outside Business Hours");
                 alert.setContentText("Business hours is from 8:00 am to 10:00 pm");
+                alert.showAndWait();
                 return;
             }
 
             if (localTime.isAfter(LocalTime.from(localTime1)) || localTime1.isBefore(LocalTime.from(localTime))) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Warning!");
-                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times.");
+                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times!");
+                alert.showAndWait();
                 return;
             }
             Appointments appointmentOverlap = DataBaseAppts.checkApptOverlap(timestamp, timestamp1, customerID);
@@ -336,13 +338,15 @@ public class AppointmentFormController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Outside Business Hours");
                 alert.setContentText("Business hours is from 8:00 am to 10:00 pm");
+                alert.showAndWait();
                 return;
             }
 
             if (localTime.isAfter(LocalTime.from(localTime1)) || localTime1.isBefore(LocalTime.from(localTime))) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Warning!");
-                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times.");
+                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times!");
+                alert.showAndWait();
                 return;
             }
             Appointments appointmentOverlap = DataBaseAppts.checkApptOverlap(timestamp, timestamp1, customerID);
