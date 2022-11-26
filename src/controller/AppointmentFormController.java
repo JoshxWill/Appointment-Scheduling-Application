@@ -201,7 +201,7 @@ public class AppointmentFormController implements Initializable {
             if (localTime.isAfter(LocalTime.from(localTime1)) || localTime1.isBefore(LocalTime.from(localTime))) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Warning!");
-                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times!");
+                alert.setContentText("Start time cannot start after end time. End time cannot start before start time. Must correct to appropriate times!");
                 alert.showAndWait();
                 return;
             }
@@ -345,7 +345,7 @@ public class AppointmentFormController implements Initializable {
             if (localTime.isAfter(LocalTime.from(localTime1)) || localTime1.isBefore(LocalTime.from(localTime))) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Warning!");
-                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times!");
+                alert.setContentText("Start time cannot start after end time. End time cannot start before start time. Must correct to appropriate times!");
                 alert.showAndWait();
                 return;
             }
@@ -488,7 +488,7 @@ public class AppointmentFormController implements Initializable {
             Customers customers = null;
 
             for (Customers customers1 : DataBaseCustomers.getAllCustomers()){
-                if (customers1.getCustomerName().equals(appointmentSelect.getCustomerName()))
+                if (customers1.getCustomerName().equals(appointmentSelect.getCustomerID()))
                     customers = customers1;
             }
             CustomerIDMenu.setValue(customers);
