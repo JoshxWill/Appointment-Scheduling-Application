@@ -197,6 +197,12 @@ public class AppointmentFormController implements Initializable {
                 return;
             }
 
+            if (localTime.isAfter(LocalTime.from(localTime1)) || localTime1.isBefore(LocalTime.from(localTime))) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Warning!");
+                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times.");
+                return;
+            }
             Appointments appointmentOverlap = DataBaseAppts.checkApptOverlap(timestamp, timestamp1, customerID);
             if (appointmentOverlap != null) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -333,6 +339,12 @@ public class AppointmentFormController implements Initializable {
                 return;
             }
 
+            if (localTime.isAfter(LocalTime.from(localTime1)) || localTime1.isBefore(LocalTime.from(localTime))) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Warning!");
+                alert.setContentText("Start Time cannot start after end time. End time cannot start before start time. Must correct to appropriate times.");
+                return;
+            }
             Appointments appointmentOverlap = DataBaseAppts.checkApptOverlap(timestamp, timestamp1, customerID);
             if (appointmentOverlap != null) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
