@@ -40,11 +40,11 @@ public class DataBaseAppts {
                 int customerID = resultset.getInt("Customer_ID");
                 int userID = resultset.getInt("User_ID");
                 int contactID = resultset.getInt("Contact_ID");
-                String customer = resultset.getString("Customer_ID");
+                String customerName = resultset.getString("Customer_Name");
                 String user = resultset.getString("User_Name");
                 String contact = resultset.getString("Contact_Name");
 
-                Appointments appointments = new Appointments(appointmentID, title, description, location, type, TimeConversions.UTCtoLocal1(startDT), TimeConversions.UTCtoLocal1(endDT), customerID, userID, contactID, customer, user, contact);
+                Appointments appointments = new Appointments(appointmentID, title, description, location, type, TimeConversions.UTCtoLocal1(startDT), TimeConversions.UTCtoLocal1(endDT), customerID, userID, contactID, customerName, user, contact);
                 appointmentsObservableList.add(appointments);
             }
         } catch (SQLException throwables){
