@@ -41,15 +41,15 @@ public class Customers {
      *Customers
      *
      * @param customerID ID
-     * @param name Name
+     * @param customerName Name
      * @param address Address
      * @param postalCode Postal Code
      * @param phone Phone
      * @param division Division
      */
-    public Customers(int customerID, String name, String address, String postalCode, String phone, FirstLevelDivisions division){
+    public Customers(int customerID, String customerName, String address, String postalCode, String phone, FirstLevelDivisions division){
         this.customerID = customerID;
-        this.customerName = name;
+        this.customerName = customerName;
         this.address = address;
         this.postalCode = postalCode;
         this.phone = phone;

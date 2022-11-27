@@ -488,7 +488,7 @@ public class AppointmentFormController implements Initializable {
             Customers customers = null;
 
             for (Customers customers1 : DataBaseCustomers.getAllCustomers()){
-                if (customers1.getCustomerName().equals(appointmentSelect.getCustomerID()))
+                if (customers1.getCustomerName().equals(appointmentSelect.getCustomerName()))
                     customers = customers1;
             }
             CustomerIDMenu.setValue(customers);
